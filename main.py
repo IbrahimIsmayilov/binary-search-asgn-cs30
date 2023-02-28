@@ -7,12 +7,10 @@ import math
 def binarySearch(anArray, item):
     li = 0
     ui = len(anArray) - 1
-    leftValues = True
 
-    while leftValues:
+    while li <= ui :
         mi = math.floor((li + ui) / 2)
         if anArray[mi] == item:
-            leftValues = False
             return mi
         elif item < mi:
             ui = mi - 1
@@ -25,6 +23,6 @@ def binarySearch(anArray, item):
 
 print(binarySearch(nums, 100))
 print(binarySearch(nums, 75))
-# print(binarySearch(words, "fish"))
-# print(binarySearch(words, "at"))
-# print(binarySearch(unsorted, 70))
+print(binarySearch(words, "fish"))
+print(binarySearch(words, "at"))
+print(binarySearch(unsorted, 70))
